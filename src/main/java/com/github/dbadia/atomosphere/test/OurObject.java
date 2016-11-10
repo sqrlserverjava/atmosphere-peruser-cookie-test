@@ -39,7 +39,7 @@ public class OurObject {
 		final SqrlAuthenticationStatus toReturn = status;
 		if (toReturn.ordinal() < SqrlAuthenticationStatus.values().length - 1) {
 			status = SqrlAuthenticationStatus.values()[toReturn.ordinal() + 1];
-			wait += 2000;
+			wait += 500;
 			triggerAt = computeTriggerAt();
 		}
 		return triggerAt;

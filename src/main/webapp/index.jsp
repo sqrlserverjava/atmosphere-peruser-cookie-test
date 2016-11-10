@@ -1,5 +1,6 @@
 <%@page import="com.github.dbadia.atomosphere.test.OurAtmosphereHandler"%>
 <%@page import="java.util.UUID"%>
+<%@page import="java.util.UUID"%>
 <%@ page session="false" %>
 
 <!DOCTYPE html>

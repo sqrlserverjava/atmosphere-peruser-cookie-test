@@ -59,7 +59,7 @@ $(function () {
                 + ': ' + json.message + '</p>');
             if(json.message == 'AUTH_COMPLETE') {
             	subSocket.push(atmosphere.util.stringifyJSON({ author: author, message: 'redirect' }));
-            	window.location.replace('done.html');
+            	window.location.replace('done');
             }
             
         }
