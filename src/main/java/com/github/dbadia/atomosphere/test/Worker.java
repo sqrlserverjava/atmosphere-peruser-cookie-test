@@ -73,7 +73,7 @@ public class Worker implements Runnable {
 		 * 1. We need a 1 to 1 broadcast approach. Attempts to do so
 		 * 		with 2.5.4 did not work, when we called broadcast,
 		 * 		onStateChange was never invoked
-		 * 2. Even if 1. did work, each broadcaster spawns at least 3
+		 * 2. Even if the above did work, each broadcaster spawns at least 3
 		 * 		threads via executor service.  There are ways around that
 		 * 		but it just seems like needless overhead
 		 */

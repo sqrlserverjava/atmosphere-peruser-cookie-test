@@ -58,7 +58,7 @@ $(function () {
                 + (datetime.getMinutes() < 10 ? '0' + datetime.getMinutes() : datetime.getMinutes())
                 + ': ' + json.message + '</p>');
             if(json.message == 'AUTH_COMPLETE') {
-            	subSocket.push(atmosphere.util.stringifyJSON({ author: author, message: 'redirect' }));
+            	subsocket.push(atmosphere.util.stringifyJSON({ author: author, message: 'redirect' }));
             	window.location.replace('done');
             }
             
@@ -76,12 +76,12 @@ $(function () {
         content.html($('<p>', { text: 'Sorry, but there\'s some problem with your '
             + 'socket or the server is down' }));
     };
-    var subSocket = socket.subscribe(request);
+    var subsocket = socket.subscribe(request);
 
     
     author = new Date().getTime() / 1000;
     var msg = 'start';
-    subSocket.push(atmosphere.util.stringifyJSON({ author: author, message: msg }));
+    subsocket.push(atmosphere.util.stringifyJSON({ author: author, message: msg }));
     $(this).val('');
     myName = author;
 
