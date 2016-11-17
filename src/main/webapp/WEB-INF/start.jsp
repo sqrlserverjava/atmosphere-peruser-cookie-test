@@ -9,7 +9,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Atmosphere Test</title>
-    <script	type="text/javascript"  src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><![endif]-->
+	<!--[if IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><!--<![endif]-->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/atmosphere/2.2.12/atmosphere.js"></script>
    	<script>
 	// http://stackoverflow.com/a/11663507/2863942
@@ -47,7 +48,6 @@
    	    var author = null;
    	    var logged = false;
    	    var socket = atmosphere;
-   	    //var request = { url: document.location.toString() + '/update',
    	    var urlpath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/")) +'/update';
    	    var request = { url: urlpath,
    	        contentType: "application/json",
