@@ -78,7 +78,7 @@
 
    	    request.onMessage = function (response) {
    	        var message = response.responseBody;
-   	        console.log(message);
+   	        console.log('atmosphere received message:'+ message);
    	        try {
    	            var json = atmosphere.util.parseJSON(message);
    	        } catch (e) {
