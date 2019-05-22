@@ -11,7 +11,7 @@
 		<dependency>
 			<groupId>org.atmosphere</groupId>
 			<artifactId>atmosphere-runtime</artifactId>
-			<version>2.4.5</version>
+			<version>2.5.2</version>
 		</dependency>
 
 		<!-- http://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
@@ -58,6 +58,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>atmosphere-push-test</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
