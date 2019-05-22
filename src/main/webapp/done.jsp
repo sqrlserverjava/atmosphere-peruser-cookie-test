@@ -16,6 +16,6 @@
 </head>
 <body>
     <div id="header"><h3>Atmosphere Push Test Complete.</h3></div>
-    <c><a href="/atmosphere-test-cookie">Run again</a></c>
+    <c><a href="/start">Run again</a></c>
 </body>
 </html>
