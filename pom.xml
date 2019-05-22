@@ -7,6 +7,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>atmosphere push status test webapp - no sessions</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+	    <maven.compiler.source>1.8</maven.compiler.source>
+	    <maven.compiler.target>1.8</maven.compiler.target>	
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.atmosphere</groupId>
@@ -66,16 +72,6 @@
 				<version>2.6</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
-				<configuration>
-					<!-- or whatever version you use -->
-					<source>1.8</source>
-					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
