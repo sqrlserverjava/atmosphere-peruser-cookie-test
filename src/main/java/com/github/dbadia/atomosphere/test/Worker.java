@@ -63,7 +63,7 @@ public class Worker implements Runnable {
 			return;
 		}
 		final AtmosphereResponse res = resource.getResponse();
-
+		res.setContentType("application/json");
 		// @formatter:off
 		/*
 		 * In general, the Atmosphere documentation recommends using the
