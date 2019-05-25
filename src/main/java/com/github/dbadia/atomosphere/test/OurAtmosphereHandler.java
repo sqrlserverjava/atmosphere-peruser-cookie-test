@@ -1,6 +1,7 @@
 package com.github.dbadia.atomosphere.test;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -41,6 +42,11 @@ public class OurAtmosphereHandler implements AtmosphereHandler {
 		if (request.getMethod().equalsIgnoreCase("GET")) {
 			logger.info("Atmosphere onRequest {} {} {} {}", request.getMethod(), cookiesToString(request.getCookies()),
 					resource.uuid(), request.getHeader("User-Agent"));
+			final Enumeration<String> iter = request.getHeaderNames();
+			while (iter.hasMoreElements()) {
+				final String name = iter.nextElement();
+				System.out.println("HEADER: " + name + "=" + request.getHeader(name));
+			}
 			resource.suspend();
 			processor.storeLatestResource(resource);
 		} else if (request.getMethod().equalsIgnoreCase("POST")) {

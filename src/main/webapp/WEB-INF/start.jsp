@@ -53,6 +53,7 @@
    	        contentType: "application/json",
    	        logLevel: 'debug',
    	        transport: 'sse',
+   	     headers:{'X-sqrl-corelator':'xyz'},
    	        reconnectInterval: 5000,
 
    	        fallbackTransport: 'long-polling'};
